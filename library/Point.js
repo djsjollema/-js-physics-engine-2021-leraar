@@ -21,6 +21,33 @@ class Point {
     }
 
     drag(){
-        console.log('ik ben draggable')
+        let distance = Infinity;
+        let dragging = false;
+
+       addEventListener('mousedown',(e) => {
+           let dx = e.clientX - this.x;
+           let dy = e.clientY - this.y;
+           distance = Math.sqrt(dx * dx + dy *dy); 
+           if(distance< this.radius){
+               dragging = true;
+           }
+       })
+
+       addEventListener('mousemove',(e)=>{
+           if(dragging){
+               this.x = e.clientX;
+               this.y = e.clientY;
+           }
+       })
+
+       addEventListener('mouseup',() =>{
+           dragging = false;
+       })
+    }
+
+    distanceTo(xm,ym){
+        let dx = xm - this.x;
+        let dy = ym - this.y;
+        return Math.sqrt(dx*dx + dy*dy);
     }
 }
