@@ -22,15 +22,15 @@ class GraphBackGround {
                 }
         }
 
-        for (let i=0; i<200 ;i++){
-            if(i%10 == 0){
-                context.beginPath();
-                context.moveTo(i,0);
-                context.lineTo(i,100);
-                context.closePath();
-                context.stroke();
-            }
+        // for (let i=0; i<200 ;i++){
+        //     if(i%10 == 0){
+        //         context.beginPath();
+        //         context.moveTo(i,0);
+        //         context.lineTo(i,100);
+        //         context.closePath();
+        //         context.stroke();
+        //     }
 
-        }
+        // }
     }
 }
