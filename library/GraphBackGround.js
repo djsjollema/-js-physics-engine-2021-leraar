@@ -37,7 +37,8 @@ class GraphBackGround {
                 context.stroke();
             }
         }
-
-
     }
+
+
+    
 }
